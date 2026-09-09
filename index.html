@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DJ Hops Beats</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo-wrap">
+      <!-- Reemplaza estas dos imágenes por tus logos reales -->
+      <img src="logo-1.png" alt="DJ Hops Beats" class="logo logo-main">
+    </div>
+    <nav class="header-links">
+      <a href="#beats">Beats</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>DJ HOPS BEATS</h1>
+    <p class="hero-sub">Escucha los beats. Dale play sin salir de acá.</p>
+  </section>
+
+  <main id="beats" class="video-grid">
+
+    <!-- ===================================================================
+         CADA BLOQUE ES UN VIDEO. PARA AGREGAR UNO NUEVO, COPIA UN BLOQUE
+         COMPLETO <article class="video-card">...</article> Y CAMBIA:
+         - data-id            → el ID del video de YouTube
+         - la URL de la imagen → mismo ID de video
+         - el texto dentro de <h3> → nombre del beat (opcional, puedes dejarlo vacío)
+         =================================================================== -->
+
+    <article class="video-card" data-id="vtGEL6PMvJ0">
+      <div class="thumb">
+        <img src="https://img.youtube.com/vi/vtGEL6PMvJ0/hqdefault.jpg" alt="">
+        <span class="play-icon" aria-hidden="true"></span>
+      </div>
+      <h3></h3>
+    </article>
+
+    <article class="video-card" data-id="9ZHoNo9wR4g">
+      <div class="thumb">
+        <img src="https://img.youtube.com/vi/9ZHoNo9wR4g/hqdefault.jpg" alt="">
+        <span class="play-icon" aria-hidden="true"></span>
+      </div>
+      <h3></h3>
+    </article>
+
+    <!-- Cuando quieras agregar más, copia un bloque <article class="video-card">...</article>
+         completo y cámbiale el data-id, la URL de la imagen y (si quieres) el título -->
+
+  </main>
+
+  <footer id="contacto" class="site-footer">
+    <p>DJ Hops Beats — bookings y encargos por contacto directo.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
