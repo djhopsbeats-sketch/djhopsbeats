@@ -65,8 +65,9 @@ body {
 .hero-sub {
   margin: 14px auto 0;
   color: var(--ink-dim);
-  font-size: clamp(1rem, 2vw, 1.15rem);
-  max-width: 40ch;
+  font-size: clamp(0.85rem, 2vw, 1.15rem);
+  max-width: none;
+  white-space: nowrap;
 }
 
 /* ---------- Video grid ---------- */
