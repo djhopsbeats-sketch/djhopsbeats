@@ -31,7 +31,7 @@ body {
 
 .logo-wrap { display: flex; align-items: center; gap: 12px; }
 
-.logo { height: 40px; width: auto; display: block; }
+.logo { height: 80px; width: 80px; display: block; }
 
 .header-links { display: flex; gap: 28px; }
 
