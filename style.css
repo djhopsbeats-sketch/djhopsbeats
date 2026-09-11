@@ -23,10 +23,10 @@ body {
 
 .site-header {
   display: flex;
-  flex-direction: column; /* Organiza el logo y los enlaces en columna */
-  align-items: center;    /* Centra horizontalmente todo el contenido */
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  gap: 16px;              /* Espacio entre el logo y los enlaces */
+  gap: 16px;
   padding: 24px clamp(20px, 5vw, 56px);
   border-bottom: 1px solid var(--border);
 }
@@ -47,7 +47,7 @@ body {
 
 .header-links { 
   display: flex; 
-  justify-content: center; /* Centra las palabras Beats y Contacto */
+  justify-content: center; 
   gap: 32px; 
 }
 
