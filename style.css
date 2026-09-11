@@ -3,7 +3,7 @@
   --ink: #ede8df;
   --ink-dim: #9a958a;
   --gold: #d9a441;
-  --card-bg: rgba(17, 17, 16, 0.9); /* Fondo semi-transparente para que la pared se intuya al fondo */
+  --card-bg: rgba(17, 17, 16, 0.9);
   --border: rgba(35, 35, 32, 0.6);
 }
 
@@ -99,19 +99,21 @@ body {
   max-width: 600px;
 }
 
-/* ---------- Video grid ---------- */
+/* ---------- Video grid (2 Columnas fijas en PC) ---------- */
 
 .video-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 20px;
+  width: 100%;
   padding: 24px clamp(20px, 5vw, 56px);
 }
 
-@media (min-width: 720px) {
-  .video-grid { grid-template-columns: 1fr 1fr; }
+@media (min-width: 768px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr;
+    max-width: 100%;
+  }
 }
 
 .video-card {
