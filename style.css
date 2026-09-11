@@ -23,15 +23,20 @@ body {
 
 .site-header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column; /* Organiza el logo y los enlaces en columna */
+  align-items: center;    /* Centra horizontalmente todo el contenido */
+  justify-content: center;
+  gap: 16px;              /* Espacio entre el logo y los enlaces */
   padding: 24px clamp(20px, 5vw, 56px);
   border-bottom: 1px solid var(--border);
 }
 
-.logo-wrap { display: flex; align-items: center; gap: 12px; }
+.logo-wrap { 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}
 
-/* CORRECCIÓN: Evita que el logo se deforme manteniendo su proporción */
 .logo { 
   height: clamp(50px, 8vw, 80px); 
   width: auto; 
@@ -40,7 +45,11 @@ body {
   display: block; 
 }
 
-.header-links { display: flex; gap: 28px; }
+.header-links { 
+  display: flex; 
+  justify-content: center; /* Centra las palabras Beats y Contacto */
+  gap: 32px; 
+}
 
 .header-links a {
   color: var(--ink-dim);
@@ -69,7 +78,6 @@ body {
   color: var(--ink);
 }
 
-/* CORRECCIÓN: Se remueve white-space: nowrap para evitar desbordamiento en celulares */
 .hero-sub {
   margin: 14px auto 0;
   color: var(--ink-dim);
