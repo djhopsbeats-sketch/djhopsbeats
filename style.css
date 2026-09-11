@@ -31,7 +31,14 @@ body {
 
 .logo-wrap { display: flex; align-items: center; gap: 12px; }
 
-.logo { height: 80px; width:100px; display: block; }
+/* CORRECCIÓN: Evita que el logo se deforme manteniendo su proporción */
+.logo { 
+  height: clamp(50px, 8vw, 80px); 
+  width: auto; 
+  max-width: 120px;
+  object-fit: contain; 
+  display: block; 
+}
 
 .header-links { display: flex; gap: 28px; }
 
@@ -55,19 +62,19 @@ body {
 
 .hero h1 {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(4rem, 14vw, 9rem);
+  font-size: clamp(3.8rem, 13vw, 9rem);
   line-height: 0.9;
   letter-spacing: 0.01em;
   margin: 0;
   color: var(--ink);
 }
 
+/* CORRECCIÓN: Se remueve white-space: nowrap para evitar desbordamiento en celulares */
 .hero-sub {
   margin: 14px auto 0;
   color: var(--ink-dim);
   font-size: clamp(0.85rem, 2vw, 1.15rem);
-  max-width: none;
-  white-space: nowrap;
+  max-width: 600px;
 }
 
 /* ---------- Video grid ---------- */
@@ -126,6 +133,12 @@ body {
   background: rgba(5, 5, 5, 0.55);
   border: 1.5px solid var(--gold);
   pointer-events: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.thumb:hover .play-icon {
+  background: rgba(217, 164, 65, 0.2);
+  transform: translate(-50%, -50%) scale(1.08);
 }
 
 .play-icon::after {
@@ -147,7 +160,6 @@ body {
   color: var(--ink-dim);
 }
 
-/* Si dejas el <h3> vacío para un video, no ocupa espacio extra */
 .video-card h3:empty { display: none; }
 
 /* ---------- Footer ---------- */
@@ -156,6 +168,16 @@ body {
   padding: 40px clamp(20px, 5vw, 56px) 56px;
   color: var(--ink-dim);
   font-size: 0.9rem;
+  text-align: center;
+}
+
+.site-footer a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
 }
 
 /* ---------- Accesibilidad ---------- */
