@@ -234,4 +234,12 @@ body {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+}/* Corrección para que el iframe de YouTube ocupe todo el espacio de la miniatura */
+.thumb iframe {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
 }
