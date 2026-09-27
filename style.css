@@ -72,36 +72,43 @@ body {
 }
 
 /* ==========================================================================
-   HERO SECTION
+   HERO SECTION (TITULO GIGANTE E IMPONENTE)
    ========================================================================== */
 .hero {
   text-align: center;
-  padding: 4rem 1.5rem 3rem;
-  max-width: 800px;
+  padding: 4rem 1.5rem 2.5rem;
+  max-width: 100%;
+  width: 100%;
   margin: 0 auto;
 }
 
 .hero h1 {
   font-family: var(--font-heading);
-  font-size: clamp(3rem, 8vw, 5.5rem);
-  letter-spacing: 3px;
-  line-height: 1;
+  /* Tamaño masivo adaptativo: mínimo 4.5rem, preferido 12vw, máximo 10rem */
+  font-size: clamp(4.5rem, 12vw, 10rem);
+  letter-spacing: 6px;
+  line-height: 0.88;
   color: #ffffff;
-  text-shadow: 0 0 20px rgba(255, 183, 3, 0.2);
-  margin-bottom: 0.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  /* Sombra blanca profunda y resplandor para dar presencia y volumen */
+  text-shadow: 0 0 35px rgba(255, 255, 255, 0.35), 0 0 70px rgba(255, 255, 255, 0.15);
+  margin-bottom: 1.2rem;
 }
 
 .hero-sub {
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   color: var(--accent-color);
-  font-size: 1.1rem;
+  font-size: 1.25rem;
+  text-transform: uppercase;
 }
 
 .hero-sub:last-of-type {
   color: var(--text-muted);
-  font-size: 0.95rem;
-  margin-top: 0.25rem;
+  font-size: 1.05rem;
+  margin-top: 0.3rem;
+  letter-spacing: 2px;
 }
 
 /* ==========================================================================
@@ -257,7 +264,7 @@ body {
   }
   
   .hero {
-    padding-top: 2.5rem;
+    padding-top: 2rem;
   }
   
   .video-grid {
