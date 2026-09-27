@@ -109,11 +109,12 @@ body {
    ========================================================================== */
 .video-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(1, 1fr);
   gap: 2rem;
-  max-width: 1200px;
+  width: 100%;
+  max-width: 100%; /* Permite ocupar todo el ancho de pantalla */
   margin: 0 auto;
-  padding: 2rem 1.5rem 4rem;
+  padding: 2rem 2rem 4rem;
 }
 
 .video-card {
@@ -124,6 +125,7 @@ body {
   cursor: pointer;
   transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
   box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  width: 100%;
 }
 
 /* Efecto Hover con Borde Neón/Glow y Elevación */
@@ -138,6 +140,7 @@ body {
   aspect-ratio: 16 / 9;
   background: #000;
   overflow: hidden;
+  width: 100%;
 }
 
 .thumb img {
@@ -195,6 +198,16 @@ body {
   line-height: 1.4;
 }
 
+/* Corrección para que el iframe de YouTube ocupe todo el espacio de la miniatura */
+.thumb iframe {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+}
+
 /* ==========================================================================
    FOOTER
    ========================================================================== */
@@ -218,9 +231,27 @@ body {
 }
 
 /* ==========================================================================
-   RESPONSIVE
+   RESPONSIVE & PANTALLAS GRANDES
    ========================================================================== */
-@media (max-width: 600px) {
+
+/* Tablets y pantallas medianas (2 columnas) */
+@media (min-width: 641px) and (max-width: 1023px) {
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Computadores / Pantallas de escritorio (3 columnas abarcando todo el ancho) */
+@media (min-width: 1024px) {
+  .video-grid {
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+/* Celulares */
+@media (max-width: 640px) {
   .site-header {
     padding: 0.8rem 1rem;
   }
@@ -234,12 +265,4 @@ body {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-}/* Corrección para que el iframe de YouTube ocupe todo el espacio de la miniatura */
-.thumb iframe {
-  width: 100% !important;
-  height: 100% !important;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 0;
 }
